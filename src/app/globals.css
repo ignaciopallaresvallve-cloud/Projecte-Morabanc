@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/*
+ * Tema corporativo MoraBanc — Office Store
+ * Paleta y tokens derivados de la identidad visual de morabanc.ad
+ * (azules corporativos + acento dorado + superficies neutras).
+ */
+@theme inline {
+  /* Tipografía */
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading-brand);
+
+  /* Paleta primitiva — azules de marca */
+  --color-navy-900: #0a3550;
+  --color-navy-800: #0f406b;
+  --color-navy-700: #114274;
+  --color-navy-600: #224961;
+  --color-navy-400: #64a0d0;
+  --color-navy-300: #82add8;
+  --color-navy-100: #e8f1f8;
+
+  /* Paleta primitiva — acento dorado */
+  --color-gold-500: #f1c657;
+  --color-gold-300: #f7dd9a;
+
+  /* Paleta primitiva — neutros */
+  --color-ink-900: #212529;
+  --color-ink-600: #495057;
+  --color-ink-500: #898989;
+  --color-ink-300: #d9d9d9;
+  --color-ink-200: #e7e7e7;
+  --color-ink-100: #f8f9fa;
+
+  /* Paleta primitiva — estados */
+  --color-success: #198754;
+  --color-danger: #dc3545;
+  --color-warning: #e7891c;
+  --color-info: #358dbf;
+
+  /* Tokens semánticos — usar estos en componentes */
+  --color-brand: var(--color-navy-700);
+  --color-brand-strong: var(--color-navy-800);
+  --color-brand-deep: var(--color-navy-900);
+  --color-brand-muted: var(--color-navy-600);
+  --color-accent: var(--color-gold-500);
+  --color-accent-hover: var(--color-gold-300);
+
+  --color-surface: #ffffff;
+  --color-surface-soft: var(--color-navy-100);
+  --color-surface-muted: var(--color-ink-100);
+  --color-border: var(--color-ink-200);
+
+  --color-text: var(--color-ink-900);
+  --color-text-muted: var(--color-ink-500);
+  --color-text-inverse: #ffffff;
+
+  /* Sombras alineadas con la elevación usada por MoraBanc */
+  --shadow-soft: 0 0.125rem 0.25rem rgba(33, 37, 41, 0.075);
+  --shadow-elevated: 0 0.5rem 1rem rgba(33, 37, 41, 0.15);
+  --shadow-lifted: 0 1rem 3rem rgba(33, 37, 41, 0.175);
+}
+
+:root {
+  --background: var(--color-surface);
+  --foreground: var(--color-text);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Compensa el header fijo al saltar a anclas */
+html {
+  scroll-padding-top: 5rem;
+}
